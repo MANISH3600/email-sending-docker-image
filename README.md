@@ -23,9 +23,9 @@ PostgreSQL (hosted online)
 Docker & Docker Compose
 
 ⚙️ Setup Instructions
-Update your settings:
+Update your settings in docker-compose file :
 
-Enter your PostgreSQL database credentials in the project settings.
+Enter your PostgreSQL database credentials .
 
 Enter your email address (used to send reset links).
 

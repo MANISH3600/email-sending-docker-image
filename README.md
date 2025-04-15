@@ -35,25 +35,19 @@ Run the project:
 
 In the project’s root directory (where manage.py is located), run:
 
-bash
-Copy
-Edit
+
 docker-compose up --build
 This will build and run all containers defined in docker-compose.yml and Dockerfile.
 
 ✅ After Setup
 Once the containers are up, access the project at:
 
-bash
-Copy
-Edit
+
 http://localhost:8000/register
 🧪 Development Tip
 For testing purposes, you can use:
 
-python
-Copy
-Edit
+
 ALLOWED_HOSTS = ['*']
 in your settings.py to allow all hosts.
 

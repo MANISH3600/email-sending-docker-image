@@ -1,54 +1,71 @@
-🔐 Simple Django Authentication Project
-This is a basic authentication service built with Django. It includes:
 
-User registration
-
-User login
-
-A profile page
-
-Forgot password functionality — if the user exists in the database, they'll receive a reset email like this:
 
 <img width="1335" alt="Screenshot 2025-04-15 at 5 46 27 PM" src="https://github.com/user-attachments/assets/63783518-cc42-4c51-abdc-02cf223263c4" />
 
-🛠️ Technologies Used
-Django
+Django Authentication System with Email Service — Dockerized Microservices Architecture
+A fully containerized Django authentication project built with Docker Compose. This project showcases how to structure and run multiple Docker containers for a modern, scalable web application — integrating services like PostgreSQL, Redis, and Celery for asynchronous email-based password reset functionality.
 
-Redis
+💡 Why This Project Stands Out
+🔧 Key Feature: Docker Compose + Multi-Container Setup
+This project is an excellent example of how to separate concerns using Docker Compose. Each service runs in its own container:
 
-Celery
+🐍 Django (Web App)
 
-PostgreSQL (hosted online)
+🐘 PostgreSQL (Database)
 
-Docker & Docker Compose
+🔄 Redis (Broker for Celery)
 
-⚙️ Setup Instructions
-Update your settings in docker-compose file :
+⚙️ Celery (Asynchronous task runner for sending emails)
 
-Enter your PostgreSQL database credentials .
+By leveraging Docker Compose, you can easily spin up the full development environment with one command, ensuring consistency across machines and teams.
 
-Enter your email address (used to send reset links).
+🚀 Core Features
+👤 User Registration & Login
 
-Enable 2-Step Verification for your email and use the App Password (paste it without any spaces).
+🔁 Forgot Password – Email-based password reset
 
-Run the project:
+📩 Email Service – Secure email sending using App Passwords
 
-In the project’s root directory (where manage.py is located), run:
+🔒 Secure Profile Page
+
+🛠️ Tech Stack
+Django – Python web framework
+
+PostgreSQL – Hosted relational DB
+
+Celery + Redis – Async tasks for sending email
+
+Docker & Docker Compose – Container orchestration
+
+⚙️ How to Run (Using Docker Compose)
+Set up Configuration
+
+Update your email & database credentials in docker-compose.yml and settings.py.
+
+Enable 2-Step Verification for your email, and use an App Password in place email password field in docker compose file .
+
+Run All Containers
 
 
 docker-compose up --build
-This will build and run all containers defined in docker-compose.yml and Dockerfile.
+This command builds and launches:
 
-✅ After Setup
-Once the containers are up, access the project at:
+Django app container
 
+PostgreSQL container
 
-http://localhost:8000/register
-🧪 Development Tip
-For testing purposes, you can use:
+Redis container
+
+Celery worker container
+
+🔗 Access Your Project
+After running the setup, open:
+
+📍 http://localhost:8000/register
+
+🧪 Quick Dev Tip
+Use:
 
 
 ALLOWED_HOSTS = ['*']
-in your settings.py to allow all hosts.
-
-That’s it — no extra steps needed!
+in settings.py to allow access from all hosts during development.

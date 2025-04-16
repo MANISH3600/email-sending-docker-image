@@ -1,3 +1,4 @@
+🔐 Django Authentication System with Email Service — Dockerized Microservices Architecture
 
 
 <img width="1335" alt="Screenshot 2025-04-15 at 5 46 27 PM" src="https://github.com/user-attachments/assets/63783518-cc42-4c51-abdc-02cf223263c4" />
